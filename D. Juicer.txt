@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+#define ElNagar_74 ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+using namespace std;
+
+int main()
+{
+    ElNagar_74
+
+    int n, b, d;
+    cin >> n >> b >> d;
+
+    int total = 0, repeated = 0;
+    while(n--){
+        int a;
+        cin >> a;
+
+        if(a <= b)
+            total += a;
+
+        if(total > d){
+            repeated++;
+            total = 0;
+        }
+
+    }
+
+    cout << repeated;
+    return 0;
+}

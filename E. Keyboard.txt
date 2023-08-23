@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+#define ElNagar_74 ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+using namespace std;
+
+int main()
+{
+    ElNagar_74
+
+    char c;
+    cin >> c;
+
+    string ori = "qwertyuiopasdfghjkl;zxcvbnm,./";
+
+    string s;
+    cin >> s;
+
+    if(c == 'R'){
+        for(int i = 0; i < s.length(); i++){
+            for(int j = 0; j < ori.length(); j++){
+                if(s[i] == ori[j]){
+                    s[i] = ori[j-1];
+                    break;
+                }
+            }
+        }
+    }
+
+    else{
+        for(int i = 0; i < s.length(); i++){
+            for(int j = 0; j < ori.length(); j++){
+                if(s[i] == ori[j]){
+                    s[i] = ori[j+1];
+                    break;
+                }
+            }
+        }
+    }
+
+    cout << s;
+    return 0;
+}
